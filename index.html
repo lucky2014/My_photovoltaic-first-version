@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>光伏发电并网系统监控</title>
+    <link rel="stylesheet" href="src/css/common.css" />
+    <link rel="stylesheet" href="src/common.swiper/swiper.min.css" />
+</head>
+<body>
+	<div class="header">
+        <div class="logo"><img src="src/imgs/logo.png" height="44" /></div>
+        <ul class="h_user">
+            <li class="lang hide">语言</li>
+            <li id="exit"><img src="src/imgs/exit.png" width="56%" /></li>
+            <li id="userInfo">欢迎您！</li>
+        </ul>   
+    </div>
+    <div class="userInfo">
+        <ul>
+            <li><label>姓名：</label><span id="name"></span></li>
+            <li><label>邮箱：</label><span id="email"></span></li>
+            <li><label>地址：</label><span class="long" id="address"></span></li>
+            <li><label>电话：</label><span id="telphone"></span></li>
+            <li><label>最后登录IP：</label><span id="loginIp"></span></li>
+            <li><label>最后登录时间：</label><span class="short" id="loginTime"></span></li>
+            <li><label>签名：</label><span class="xlong" id="mark"></span></li>
+        </ul>
+        <i id="triangle-up1"></i><i id="triangle-up2"></i>
+    </div>
+
+    <div class="wrap big">
+    	<div class="nav">
+         <ul>
+            <li>
+                <img src="src/imgs/nav1.png" />
+                <span>总发电量<i>单位(kWh)</i></span>
+                <h4 id="msuEnergy"></h4>
+            </li>
+            <li>
+                <img src="src/imgs/nav2.png" />
+                <span>预计收益<i>单位(万元)</i></span>
+                <h4 id="msuIncome"></h4>
+            </li>
+            <li>
+                <img src="src/imgs/nav3.png" />
+                <span>总装机容量<i>单位(kWp)</i></span>
+                <h4 id="msuCapacity"></h4>
+            </li>
+            <li>
+                <img src="src/imgs/nav4.png" />
+                <span>总电站数<i>单位(个)</i></span>
+                <h4 id="msuStationNum"></h4>
+            </li>
+        </ul>   
+        </div>
+
+        <div class="map" id="myMap" style="width:100%;"></div>
+
+        <!--地图旁边的统计-->
+        <div class="barStat">
+            <ul>
+                <li class="li0">
+                    <img src="src/imgs/co2.png" />
+                    <span>CO2减排</span>
+                    <h4 id="msuCo2">&nbsp;</h4>
+                </li>
+                <li class="li1">
+                    <img src="src/imgs/plant.png" />
+                    <span>植树造林</span>
+                    <h4 id="msuAff"></h4>
+                </li>
+                <li class="li2">
+                    <img src="src/imgs/odometer.png" />
+                    <span>行驶里程</span>
+                    <h4 id="msuDistance"></h4>
+                </li>
+                <li class="li3">
+                    <img src="src/imgs/coal.png" />
+                    <span>节约标准煤</span>
+                    <h4 id="msuSavingCoal"></h4>
+                </li>
+            </ul>
+        </div>
+        
+
+        <div class="slideBt big"></div>
+    </div>
+
+
+
+    <div class="wrapRight">
+        <!--图片滚动-->
+        <div id="swiper"> </div>
+
+        <!--发电站统计下拉-->
+        <div class="pwsStat"></div>
+
+        <!--天气预报这一列-->
+        <div class="bannerSide">
+            <!--天气预报-->
+            <div class="weather"></div>
+            <!--地址栏-->
+            <div class="addressParent"></div>
+        </div>
+
+        <!--仪表这一行-->
+        <div class="pmParent">
+            <div class="powerMeter"><div id="myGauge" style="width:100%; height:226px;"></div></div>
+            <div id="refreshTime"></div>
+            <div class="defaultLabel"><span>0%</span><span>100%</span></div>
+            <div class="oneStationStat"></div>
+        </div>
+
+        <!--折线图这一行-->
+        <div class="chartsParent">
+            <div id="myline" style="width:100%; height:320px;"></div>
+
+            <!--日期选择-->
+            <div class="dateTab">
+                <dl>
+                    <dd data-value="1" class="on">实时</dd>
+                    <dd data-value="2">日</dd>
+                    <dd data-value="3">月</dd>
+                    <dd data-value="4">年</dd>
+                    <dd data-value="5">总</dd>
+                </dl>
+            </div>
+
+            <div class="datePickerParent" style="display:none">
+                <label>日期</label>
+                <input id="datePicker2" type="text" onClick="WdatePicker({dateFmt:'yyyy-MM-dd',onpicking: onpicking,readOnly:true})" />
+                <input id="datePicker3" type="text" onClick="WdatePicker({dateFmt:'yyyy-MM',onpicking: onpicking,readOnly:true})" />
+                <input id="datePicker4" type="text" onClick="WdatePicker({dateFmt:'yyyy',onpicking: onpicking,readOnly:true})"/>
+                <img id="dateImg" src="src/imgs/date.png" />
+            </div>
+        </div>
+    </div>
+
+	<div class="footer"></div>
+
+    <script type="text/javascript" src="src/common.lib/jquery/jquery-1.8.3.min2.js"></script>
+    <script type="text/javascript" src="src/common.lib/echarts1.js"></script>
+    <script type="text/javascript" src="src/common.lib/DES/CryptoJS1.js"></script>
+    <script type="text/javascript" src="src/common.lib/MD5/jquery.md51.js"></script>
+    <script type="text/javascript" src="src/common.lib/setup/setup1.js"></script>
+    <script type="text/javascript" src="src/stationDetail/lineChart1.js"></script>
+    <script type="text/javascript" src="src/common.lib/sea.js"></script>
+    <script type="text/javascript" src="src/common.lib/seajs-text/seajs-text-1.1.1/seajs-text.js"></script>
+    <script type="text/javascript" src="src/config.js"></script>
+    
+    <script>
+        seajs.use("src/index/index");
+    </script>
+    
+    <script>
+    function onpicking(dp){
+        var date = dp.cal.getNewDateStr();
+
+        var len = date.length;
+        if(len == 4){
+            date = date + "-01-01";
+        }else if(len == 7){
+            date = date + "-01";
+        }else{
+            date = date;
+        }
+        sessionStorage.setItem("date", date)
+        var dataValue = $(".dateTab dd.on").attr("data-value");
+        var stationId = sessionStorage.getItem("stationId");
+        lineApp.getDataValueChange(dataValue, stationId, date);
+    }
+
+    //60秒刷新
+    /*setInterval(function(){
+        var stationId = sessionStorage.getItem("stationId");
+        var dataValue = $(".dateTab dd.on").attr("data-value");
+        var date = sessionStorage.getItem("date");
+        lineApp.getDataValueChange(dataValue, stationId, date);
+    }, 60000);*/
+    </script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+*{ margin: 0; padding: 0; font-family: 'microsoft yahei'; font-size: 14px; list-style: none; color: #fff;}
+body{ background: #202b33; min-width: 1000px;}
+.hide{ display: none;}
+
+.wrap{ width: 62%; position: relative;}
+.big{ width: 100%;}
+/*右边*/
+.wrapRight{ position:absolute; left: 62%; top:64px; border-left: 1px solid #303a41; width: 37%; overflow: hidden;
+display: none;}
+
+.header{height: 40px; color: #fff; overflow: hidden; margin:13px 1%; padding: 0 0 10px; border-bottom: 1px solid #303a41;}
+.header .logo, header .h_user{ float: left; width: 49%;}
+.header .h_user{ text-align: right;}
+.header .h_user li{ float: right; line-height: 44px; cursor: pointer;}
+.header .h_user li img{ margin-top: 9px; display: inline-block;}
+
+.footer{ overflow: hidden; border-top: 1px solid #303a41; text-align: center; color: #fff; margin:0 1%; padding: 10px 0;}
+
+.nav{ margin: 1% 1% 0;  border-bottom: 1px solid #303a41;}
+.nav ul{ overflow: hidden;}
+.nav li{ width: 25%; text-align: center; float: left;}
+.nav li img{ width: 10%; display: inline-block; vertical-align: top;}
+.nav li span{ display: inline-block; color: #fff; padding-left: 6px; text-align: left;}
+.nav li span i{ display: block; font-style: normal; font-weight: normal; color: #6d7d89; font-size: 12px;}
+.nav li h4{ display: block; height: 24px; color: #23f8fd; padding: 4px 0; line-height: 24px; font-size: 1.8em;  font-family:Segoe UI Symbol;}
+
+/*用户信息*/
+.userInfo{position: absolute; top: 60px; right: 10px; width: 270px; background: #202b33; padding: 10px;
+border: 1px solid #71808e; z-index: 99; border-radius:4px; display: none;}
+.userInfo li{ overflow: hidden; padding: 4px 0;}
+.userInfo label,.userInfo span{display: inline-block; vertical-align: top;}
+.userInfo label{ padding: 0 8px 0 0;}
+.userInfo span.xlong{ width: 210px;}
+.userInfo span.long{ width: 200px;}
+.userInfo span.short{ width: 150px;}
+#triangle-up1 {
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 10px solid #71808e;
+    position: absolute;
+    top: -10px;
+    right: 100px;
+}
+#triangle-up2 {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 10px solid #202b33;
+    position: absolute;
+    top: -10px;
+    right: 102px;
+}
+/*地图旁边的统计*/
+.barStat{ position: absolute; left: 0; bottom: 20px; z-index: 99; width: 570px;}
+.barStat ul{ overflow: hidden; clear: both;}
+.barStat li{ display: inline-block; text-align: center; vertical-align: top; 
+margin:0 14px; padding: 20px 0; min-width: 104px; min-height: 107px;}
+.barStat li img,.barStat li span,.barStat li h4{ display: block; margin: 0 auto; padding: 0 4px;}
+.barStat li span{ padding: 14px 0; font-size: 12px;}
+.barStat li.li0{ background: #f7931e;}
+.barStat li.li1{ background: #1eaa39;}
+.barStat li.li2{ background: #7161e5;}
+.barStat li.li3{ background: #2ebdef;}
+/*点击按钮*/
+.slideBt{ position: absolute; right: 0; width: 24px; height: 42px; top: 50%; margin-top: -21px; 
+background: url(../imgs/slideBt.png); background-position: 0 0; cursor: pointer;} 
+.slideBt.big{ background-position: 0 -42px;}
+
+/*电站列表---下拉*/
+.pwsStat{position: absolute;left: 10px;top: 10px;z-index: 100;}
+.pwsStat span.pwsText{display: block;border: 1px solid #959596;color: #fff;font-size: 0.8rem;background-color: #4e5e6b;padding: 3px 5px;width: 160px;
+cursor: pointer;}
+.pwsStat span.pwsText em{ font-style: normal; width: 140px; display:inline-block; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.pwsStat span.pwsText i{border:5px solid transparent;border-top: 6px solid #fff;float: right;margin-left: 10px;margin-top: 5px;}
+.pwsStat .level1{ }
+.pwsStat .level1,.pwsStat .level2{background-color: #4e5e6b;color: #fff;font-size: 0.8rem;border:1px solid #959596;border-top: none;border-bottom: none;
+cursor: pointer;}
+.pwsStat .level1{ width: 350px; height: 400px; overflow: hidden; overflow-y: scroll}
+.pwsStat .level1>li,.pwsStat .level2>li{padding: 5px;text-align: left;border-bottom: 1px solid #959596;position: relative;}
+.pwsStat .level2{ position: absolute; z-index: 999; left: 144px;width: 180px;top: -1px; border-top:1px solid #959596;background-color:#172541;}
+
+/*天气预报*/
+.bannerSide{width: 38%;padding:0 2%; background-color: rgba(32,43,51,.4);position: absolute;top: 0;
+right: 0;bottom: 0;z-index: 66; height: 180px; overflow: hidden; border-left: 1px solid #959596;}
+.bannerSide p{padding: 4px 0; overflow: hidden; width: 100%;}
+.bannerSide span{font-size: .9rem;color: #fff; float: left;margin: 5px 0 0 6px;}
+
+.weather{overflow: hidden;border-bottom: 1px solid #878f9a;height: 70px; position: relative;}
+.weather ul{ position: absolute; left: 0; top: 0; height: 1000px;}
+.weather b{font-weight: normal;padding: 2px 10px;background-color: #5d5aa1;color: #fff;border-radius: 5px;margin-top: 0.2rem;float: left;margin-left: 10px;}
+.weather i{font-style: normal;color: #fff;font-size: 1.5rem;float: right;}
+.weather img{float: right;height: 1.9rem;}
+
+/*地址栏*/
+.addressParent{ padding-top: 10px;}
+.addressParent img{float: left;height: 1.6rem;margin:0 5px;}
+.addressParent b{float: left;color: #fff;font-weight: normal;margin-top: 0.25rem;margin-left: 10px;font-size: .9rem;}
+.addressParent .address b{width: 55%; }
+.addressParent p{padding: 2px 0;}
+
+/*仪表这一行*/
+.pmParent{ clear: both; overflow: hidden; border-bottom: 1px solid #303a41; position: relative;}
+.powerMeter,.oneStationStat{ float: left; width: 50%;}
+.oneStationStat{ padding-top: 2px; padding-bottom:6px;}
+.oneStationStat li{ clear: both; background: #25364c; overflow: hidden; text-align: center; margin-top: 6px;}
+.oneStationStat li div{ float:left; background: #172541; width:20%; padding: 10px 0 6px;}
+.oneStationStat li div img{ width: 56%;}
+.oneStationStat li span{ float:left; width:36%; padding-top: 16px;}
+.oneStationStat li h4{ float:left; width:44%; padding-top: 16px;}
+
+#refreshTime{left: 0; position: absolute; bottom: 1px; width: 50%; text-align: center; color: #8698ae; font-size: 12px;}
+.defaultLabel{ position: absolute; bottom: 22px; width: 47%; text-align: center; left: 6px;}
+.defaultLabel span{ color: #8698ae; display: inline-block; font-size: 12px; padding:0 17%;}
+
+/*图表这一行*/
+.chartsParent{ clear: both; overflow: hidden; border-bottom: 1px solid #303a41; position: relative;}
+.dateTab{ position: absolute;; left: 10px; top: 14px; width: 30%; background: #384b59; border-radius:16px; padding: 0 10px;
+height:26px; line-height: 26px;}
+.dateTab dl{ clear: both; overflow: hidden; }
+.dateTab dd{ float: left; width: 19%; text-align: center; cursor: pointer;}
+.dateTab dd:first-child{ width: 24%; text-align: center;}
+.dateTab dd.on{ background: #27bb77; border-radius:12px;}
+
+.datePickerParent{ position: absolute; right: 0; top: 14px;  height: 26px; line-height: 26px;}
+.datePickerParent label{ color: #27bb77;}
+.datePickerParent input{ background: #384b59; border-radius: 3px; border: none; width: 120px; height: 26px; 
+line-height: 26px; padding-left: 6px; cursor: pointer; font-weight: normal; font-size: 12px;}
+.ui-datepicker-trigger {
+    position: absolute;
+    right: 8px;
+    top: 5px;
+}
+.swiper-wrapper{ position: absolute; }
+
+.num{ 
+        position: absolute;
+    width: 200px;
+    left: 50%;
+    margin-left: -100px;
+    bottom:5px; text-align: center;
+}
+.num li{
+    display: inline-block;
+    border-radius: 100%;
+    width: 6px;
+    height: 6px; text-indent: -99em;
+    cursor: pointer;
+    overflow: hidden;
+    margin: 3px 1px;
+    background-color: #889ead;border:1px solid #889ead;
+}
+.num li.on{
+    width: 8px;
+    height: 8px;
+    font-size: 16px;
+    margin: 2px 1px;
+    border: 0;
+    background-color: #27bb77;border: 1px solid #27bb77;
+}
+.swiper-slide{ float: left;}
+#swiper{ 
+    height: 180px;
+    overflow: hidden;
+    position: relative;}
+
+@media screen and (min-height: 670px) {
+    nav li h4 {
+	    padding: 8px 0;
+	}
+	nav li span i {
+	    line-height: 24px;
+	}
+	nav li span {
+		padding-top: 6px;
+	}
+    .pmParent{ height: 226px;}
+}
+@media screen and (min-height: 900px){
+    #myGauge{ height: 250px;}
+}
+#dateImg{position: absolute; right: 8px; top: 4px;}
