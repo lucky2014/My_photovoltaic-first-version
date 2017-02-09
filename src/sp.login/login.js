@@ -18,7 +18,15 @@ define(function(require,exports,module){
 		});
 
 		setup.commonAjax("login", params, function(msg){
+			//console.log(JSON.stringify(msg,null,2));
 			location.href = "index.html";
+			/*
+			{
+			  "loginName": "kxu1",
+			  "userId": 458,
+			  "userName": "kxu1"
+			}
+			*/
 			sessionStorage.setItem("userName", msg.userName);
 			sessionStorage.setItem("userId", msg.userId);
 		});

@@ -34,7 +34,7 @@ define(function(require, exports, module) {
                     if(index==len){
                         index = 0;
                     }
-                },2000);
+                },6000);
             }else{
             	clearInterval(me.adTimer);
             }

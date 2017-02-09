@@ -55,7 +55,7 @@ define(function(require,exports,module){
 	}
 
 	//单个电站信息,右边的那一片
-	require("src/stationDetail/index");
+	require("src/sp.stationDetail/index");
 
 	//渲染地图
 	renderChina(chinaOption.init([],layoutSize));

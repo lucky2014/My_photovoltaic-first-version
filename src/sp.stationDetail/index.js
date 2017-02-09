@@ -3,12 +3,12 @@ define(function(require, exports, module) {
     var echarts = require("echarts");
     var Engine = require("engine");
     var box = Engine.init();
-    var barStatTpl = require("src/stationDetail/oneStationStat.tpl");
-    var addressTpl = require("src/stationDetail/address.tpl");
+    var barStatTpl = require("src/sp.stationDetail/oneStationStat.tpl");
+    var addressTpl = require("src/sp.stationDetail/address.tpl");
     var footerTpl = require("src/common.partial/footer.tpl");
     var swiperTpl = require("src/common.swiper/swiper.tpl");
     var setup = require("setup");
-    var lineApp = require("src/stationDetail/lineChart"); 
+    var lineApp = require("src/sp.stationDetail/lineChart"); 
     var weatherApp = require("src/common.weather/weather");
         require("my97DatePicker");
 
@@ -234,13 +234,13 @@ define(function(require, exports, module) {
             });
         }
     };
-    var stationListApp = require("src/common.stationList/stationList");
+    var stationListApp = require("src/sp.stationList/stationList");
     
 
     //-----------------电站总表下拉业务逻辑-----------------
     //获取电站stationId
     //lineApp.getChartDataBychartType1(indexApp.getLineParams());
-    var guageApp = require("src/stationDetail/gaugeChart");
+    var guageApp = require("src/sp.stationDetail/gaugeChart");
     
     myGauge.setOption(guageApp.init(),true);
 

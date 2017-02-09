@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=8" /> 
+</head>
+<body>
+	<style>
+	  /*标签页连接列表*/
+	 *{ margin: 0; padding: 0;}
+	 #tabs>ul{ height: 30px; overflow: hidden;}
+	 #tabs>ul li{ height: 30px; line-height: 30px; float: left; background: #f1f1f1; color: #fff}
+	 #tabs>ul li.ui-tabs-active{ background: #06c;}
+ 	  #sortable11 li, #sortable22 li,#sortable33 li { margin: 0 5px 5px 5px; padding: 5px; font-size: 1.2em; width: 120px; background: #f1f1f1;}
+ 	  #sortable22 li{background: #f9f;}
+ 	  #sortable33 li{background: #f60;}
+
+	  </style>
+	<h1>标签页连接列表</h1>
+	<div id="tabs">
+		<ul>
+			<li><a href="#tabs-1">Nunc tincidunt</a></li>
+			<li><a href="#tabs-2">Proin dolor</a></li>
+			<li><a href="#tabs-3">Proin dolor</a></li>
+		</ul>
+		<div id="tabs-1">
+			<ul id="sortable11" class="connectedSortable ui-helper-reset">
+			  <li class="ui-state-default">Item 1</li>
+			  <li class="ui-state-default">Item 2</li>
+			  <li class="ui-state-default">Item 3</li>
+			  <li class="ui-state-default">Item 4</li>
+			  <li class="ui-state-default">Item 5</li>
+			</ul>
+		</div>
+		<div id="tabs-2">
+			<ul id="sortable22" class="connectedSortable ui-helper-reset">
+			  <li class="ui-state-highlight">Item 1</li>
+			  <li class="ui-state-highlight">Item 2</li>
+			  <li class="ui-state-highlight">Item 3</li>
+			  <li class="ui-state-highlight">Item 4</li>
+			  <li class="ui-state-highlight">Item 5</li>
+			</ul>
+		</div>
+		<div id="tabs-3">
+			<ul id="sortable33" class="connectedSortable ui-helper-reset">
+			  <li class="ui-state-highlight">Item 1</li>
+			  <li class="ui-state-highlight">Item 2</li>
+			  <li class="ui-state-highlight">Item 3</li>
+			  <li class="ui-state-highlight">Item 4</li>
+			  <li class="ui-state-highlight">Item 5</li>
+			</ul>
+		</div>
+	</div>
+
+
+    <script type="text/javascript" src="src/common.lib/sea.js"></script>
+    <script type="text/javascript" src="src/config.js"></script>
+    <script>
+		seajs.use("src/test.sortable_tabs/index");
+	</script>
+</body>
+</html>

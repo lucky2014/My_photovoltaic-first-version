@@ -2,7 +2,7 @@
 /* zhushi */
 .hide{ display: none;}
 body,html{width: 100%;height: 100%;}
-body{background-image: url(../imgs/login.jpg);background-size: 100% 100%;min-width: 1000px;background-repeat: no-repeat;}
+body{background-image: url(../common.imgs/login.jpg);background-size: 100% 100%;min-width: 1000px;background-repeat: no-repeat;}
 .login{width: 395px;background-color: #fff;padding: 20px 50px;position: absolute;right: 200px;top: 50%;height: 320px;
 margin-top: -185px;border-radius: 4px;}
 .login h3{text-align: center;width: 100%;color: #316dda;font-size: 20px;margin-bottom: 24px;}
@@ -15,7 +15,7 @@ font-size: 18px;border-left: 1px solid #bac7d2;outline: none;}
 .login span.msg em{ font-size: 18px; color: red; font-weight: bold; font-style: normal; padding-right: 6px; display: inline-block; 
 vertical-align: top; margin-top: 2px;}
 .login .loginBtn{width: 100%;height: 44px;border: none;border-radius: 4px;color: #fff;font-size: 18px;
-background-image: url(../imgs/btnImg.png);background-size: auto 100%;margin-bottom: 20px;}
+background-image: url(../common.imgs/btnImg.png);background-size: auto 100%;margin-bottom: 20px;}
 .login .rember{color: #687f92;}
 .login .rember b{height: 20px;width: 20px;border: 1px solid #c5c9ca;float: left;margin-right: 10px;}
 .login .rember b img{width: 20px;}

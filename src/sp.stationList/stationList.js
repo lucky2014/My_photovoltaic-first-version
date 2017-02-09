@@ -1,7 +1,7 @@
 define(function(require, exports, module) {		
 	var $ = require("jquery");
 	var Engine = require("engine");
-	var stationList = require("src/common.stationList/stationList.tpl");
+	var stationList = require("src/sp.stationList/stationList.tpl");
 	var setup = require("setup");
 
 	//实例化组件
