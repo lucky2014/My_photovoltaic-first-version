@@ -25,7 +25,7 @@
 	  </style>
 </head>
 <body>
-	<h1>默认功能</h1>
+	<h1>默认功能:在任意的 DOM 元素上启用 sortable 功能。通过鼠标点击并拖拽元素到列表中的一个新的位置，其它条目会自动调整。默认情况下，sortable 各个条目共享 draggable 属性。</h1>
 	<ul id="sortable">
 	  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 1</li>
 	  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 2</li>
@@ -37,7 +37,7 @@
 	</ul>
 
 	<br /><br /><br />
-	<h1>连接列表</h1>
+	<h1>连接列表:通过向 connectWith 选项传递一个选择器，来把一个列表中的元素排序到另一个列表中，反之亦然。最简单的办法是将带有某个 CSS class 的所有相关的列表分组，然后传递该 class 到 sortable 函数（比如，connectWith: '.myclass'）。</h1>
 
 	<ul id="sortable1" class="connectedSortable">
 	  <li class="ui-state-default">Item 1</li>

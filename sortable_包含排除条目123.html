@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=8" />
+	<style>
+		#sortable1, #sortable2 { list-style-type: none; margin: 0; padding: 0; zoom: 1; float: left;}
+  		#sortable1 li, #sortable2 li { margin: 0 5px 5px 5px; padding: 3px; width: 90%; border:1px solid #ccc; height: 30px; line-height: 30px; background: #f1f1f1;}
+  		#sortable1 li.ui-state-disabled, #sortable2 li.ui-state-disabled{ background: #fcf9c4;}
+  		h1{ clear: both;}
+  		#sortable3{ float: left;  background: #ccc; min-height: 200px; min-width: 200px;}
+  		#sortable1 li.ui-state-highlight{ background: #f40;}
+	</style> 
+</head>
+<body>
+	<h1>排序（Sortable）- 包含/排除条目</h1>
+	<h3 class="docs">指定哪个条目是 sortable：指定通过向 items 选项传递一个 jQuery 选择器哪些项目可排序。该选项之外的项目则是不可排序的，同时它们也不是 sortable 条目的有效的目标。</h3>
+ 
+	<ul id="sortable1">
+	  <li class="ui-state-default">Item 1</li>
+	  <li class="ui-state-default ui-state-disabled">（我不是 sortable 或者一个放置目标）</li>
+	  <li class="ui-state-default ui-state-disabled">（我不是 sortable 或者一个放置目标）</li>
+	  <li class="ui-state-default">Item 4</li>
+	</ul>
+	 
+	<h3 class="docs">取消排序（但作为放置目标）：如果只想防止特定的条目排序，则向 cancel 选项传递一个 jQuery 选择器。已取消的条目依然是其他条目的有效的排序目标。</h3>
+	 
+	<ul id="sortable2">
+	  <li class="ui-state-default">Item 1</li>
+	  <li class="ui-state-default ui-state-disabled">（我不是 sortable）</li>
+	  <li class="ui-state-default ui-state-disabled">（我不是 sortable）</li>
+	  <li class="ui-state-default">Item 4</li>
+	</ul>
+
+	<br /><br />
+	<h1>处理空列表:通过把 选项设置为 false，来阻止一个列表中的所有条目被放置到一个单独的空列表中。默认情况下，sortable 条目可被放置到空的列表中。</h1>
+	<div id="emptyDrop">
+		<ul id="sortable1" class="droptrue">
+			<li class="ui-state-default">可被放置到..</li>
+			<li class="ui-state-default">..一个空列表中</li>
+			<li class="ui-state-default">Item 3</li>
+			<li class="ui-state-default">Item 4</li>
+			<li class="ui-state-default">Item 5</li>
+		</ul>
+
+		<ul id="sortable2" class="dropfalse">
+			<li class="ui-state-highlight">不可被放置到..</li>
+			<li class="ui-state-highlight">..一个空列表中</li>
+			<li class="ui-state-highlight">Item 3</li>
+			<li class="ui-state-highlight">Item 4</li>
+			<li class="ui-state-highlight">Item 5</li>
+		</ul>
+
+		<ul id="sortable3" class="droptrue"></ul>
+	</div>
+
+	<br /><br />
+	<h1>放置占位符:当拖拽一个 sortable 条目到一个新的位置时，其他条目将为该条目腾出空间。向 placeholder 选项传递一个 class 来定义可视化的空白的样式。使用布尔值的 forcePlaceholderSize 选项来设置占位符的尺寸。</h1>
+
+    <script type="text/javascript" src="src/common.lib/sea.js"></script>
+    <script type="text/javascript" src="src/config.js"></script>
+    <script>
+		seajs.use("src/test.sortable_include/index");
+	</script>
+</body>
+</html>

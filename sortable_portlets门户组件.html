@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=8" />
+	<style>
+		body {
+		min-width: 520px;
+		}
+		.column {
+		width: 170px;
+		float: left;
+		padding-bottom: 100px; 
+		}
+		.portlet {
+		margin: 0 1em 1em 0;
+		padding: 0.3em; border: 1px solid #ccc;
+		}
+		.portlet-header {
+		padding: 0.2em 0.3em;
+		margin-bottom: 0.5em;
+		position: relative;
+		}
+		.portlet-toggle {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		margin-top: -8px;     background: red;
+        width: 16px;
+    	height: 16px;
+		}
+		.portlet-content {
+		padding: 0.4em;
+		}
+		.portlet-placeholder {
+		border: 1px dotted black;
+		margin: 0 1em 1em 0;
+		height: 50px;
+	}
+	</style> 
+</head>
+<body>
+	<h1>排序（Sortable）- 门户组件（Portlets）:启用门户组件（样式化的 div）作为 sortable，并使用 connectWith 选项来允许在列之间进行排序。</h1>
+	<div class="column">
+
+		<div class="portlet">
+			<div class="portlet-header">订阅</div>
+			<div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+		</div>
+
+		<div class="portlet">
+			<div class="portlet-header">新闻</div>
+			<div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+		</div>
+
+	</div>
+
+	<div class="column">
+
+		<div class="portlet">
+			<div class="portlet-header">购物</div>
+			<div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+		</div>
+
+	</div>
+
+	<div class="column">
+
+		<div class="portlet">
+			<div class="portlet-header">链接</div>
+			<div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+		</div>
+
+		<div class="portlet">
+			<div class="portlet-header">图像</div>
+			<div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+		</div>
+
+	</div>
+
+
+    <script type="text/javascript" src="src/common.lib/sea.js"></script>
+    <script type="text/javascript" src="src/config.js"></script>
+    <script>
+		seajs.use("src/test.sortable_portlets/index");
+	</script>
+</body>
+</html>

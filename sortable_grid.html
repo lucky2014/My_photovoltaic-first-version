@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=8" />
+	<style>
+		#sortable { list-style-type: none; margin: 0; padding: 0; width: 450px; }
+  		#sortable li { margin: 3px 3px 3px 0; padding: 1px; float: left; width: 100px; height: 90px; font-size: 4em; text-align: center; border: 1px solid #ccc; }
+	</style> 
+</head>
+<body>
+	<h1>排序（Sortable）- 显示为网格:让 sortable 条目显示为网格，使用 CSS 使得它们带有相同的尺寸且浮动显示。</h1>
+	<ul id="sortable">
+	  <li class="ui-state-default">1</li>
+	  <li class="ui-state-default">2</li>
+	  <li class="ui-state-default">3</li>
+	  <li class="ui-state-default">4</li>
+	  <li class="ui-state-default">5</li>
+	  <li class="ui-state-default">6</li>
+	  <li class="ui-state-default">7</li>
+	  <li class="ui-state-default">8</li>
+	  <li class="ui-state-default">9</li>
+	  <li class="ui-state-default">10</li>
+	  <li class="ui-state-default">11</li>
+	  <li class="ui-state-default">12</li>
+	</ul>
+
+    <script type="text/javascript" src="src/common.lib/sea.js"></script>
+    <script type="text/javascript" src="src/config.js"></script>
+    <script>
+		seajs.use("src/test.sortable_grid/index");
+	</script>
+</body>
+</html>
